@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRM Major Project</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <style> 
+    .text {
+  position: relative;
+ 
+  color: black;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 400px;
+  left: 150px;
+}
+ </style>
+
+
+
+
+
+</head>
+<body>
+    
+
+    <div class="navbar-fixed">
+        <nav class="black">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="/" class="brand-logo">Major Project - SRM University </a>
+              <a href="" data-target="mobile-nav" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down hover_backcolor">
+               
+             
+              
+                <li><a href="{% url 'about' %}">About</a></li>
+                
+                {% if user.is_authenticated %}
+                <a class=" white black-text waves-effect waves-dark btn  modal-trigger" href="{% url 'signout' %}"><b>SIGN OUT </b></a>
+                {% else %}
+                <a class=" white black-text waves-effect waves-dark btn  modal-trigger" href="/signin"><b>SIGN IN </b></a>
+                {% endif %}
+               
+              
+    
+    
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <ul id="mobile-nav" class="sidenav">
+        <li><a href="about.html">AboutUs</a></li>
+        <a class="black white-text waves-effect waves-light btn" style="margin-left: 27px; margin-top: 7px;">SIGN IN</a>
+    
+
+
+
+    
+         
+            
+    </ul>
+
+
+
+    {% block content %}
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+    <section> 
+      
+        <footer class=" hide-on-small-only black page-footer">
+          <div class="" style=" width: 90%; margin: auto;">
+            <div class="row">
+              <div class="col  s12 m6 l3 ">
+                <h5 class="white-text"></h5>
+                <p class="grey-text text-lighten-4">RA1911028010001 RA1911028010020 NWC101 </p>
+              </div>
+
+        
+            </div>
+            <hr>
+          
+          
+          <div class="footer-copyright">
+          
+          
+          
+            
+          
+          </div>
+      </div>
+        </footer>
+  
+        <footer class=" hide-on-med-and-up black page-footer">
+          <div class="" style=" width: 90%; margin: auto;">
+            <div class="center-align row">
+              <div class="col  s12 m6 l3 ">
+                <h5 class="white-text"></h5>
+                <p class="grey-text text-lighten-4">RA1911028010001 RA1911028010020   NWC 101 </p>
+              </div>
+          
+              <div class="col l2 m6 s12  ">
+                  <h5 class="white-text">Location</h5>
+                  <ul>
+                  <li>SRM University</li>
+                
+              </ul>     
+              </div>
+  
+            
+            </div>
+            <hr>
+          
+          
+        
+      </div>
+        </footer>
+  
+      </section>
+  
+  
+ <!--  Scripts-->
+ <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ <script src="https://kit.fontawesome.com/9478bf204b.js" crossorigin="anonymous"></script>
+         
+ <script src="{% static 'js/materialize.js' %}"></script>
+ <script src="{% static 'js/init.js' %}"></script>
+
+
+
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,111 @@
+
+ 
+  {% extends 'base_layout.html' %}
+  {% load static %}
+  
+        
+        
+        {% block content %}
+
+<section class="slider sliderv z-depth-3">
+    <ul class="slides">
+      <li>
+        <img src="{% static 'img/about.png' %}"> 
+        <div class="caption center-align">
+          <h3>About </h3>
+          
+        </div>
+      </li>
+      
+    </ul>
+  </section>
+  
+  <br> <br>
+  
+  
+  <!-- Who we are -->
+  
+  <section>
+    </section>
+    <br>
+    <section style="background-color : #303234">
+      <div class="row">
+        <div class="col s4 m4 l4 offset-s4 offset-l4 offset-m4"> <hr></div> <br> <br> <br>
+      </div>
+  
+      <div class="row" style="width: 85%; margin: auto;">
+        <div class="col s12 m6">
+          <img src="{% static 'img/ab1.png' %}"  class="responsive-img" height="500">
+  
+        </div>
+        <div class="col s12 m5 offset-m1">
+          <p style="font-size:20px; color: white; text-align: justify;">
+            One of the biggest causes of death all around the world is cardiovascular disease. By detecting the presence of disease early and taking action to intervene, one can reduce the fatalities caused by cardiovascular diseases. This can reduce the overall risk of the disease. 
+Recently, machine learning has been emerging as a technology that can be leveraged to predict outcomes and used as a tool to reduce the risk factor of such diseases. By using machine learning, we can analyze the data of a patient to identify individuals that are at risk. These predictions can be used by healthcare providers to make informed decisions and take preventive steps. With the use of machine learning, the accuracy of assessing the risk of heart disease can be improved. This can lead to treatment and preventive strategies that can prove to be very effective. 
+In this project, we aim to make an interface that is open to the public using which they can analyze their risk factor for cardiovascular disease, along with an interface with suggestions to improve cardiovascular endurance. This can help keep the public informed about their health and encourage preventative action
+
+          </p>
+        </div>
+      </div>
+  
+    </section>
+  <br> <br> <br>
+    <section>
+      <h2 class="center-align"> Abstract</h2> 
+      </section>
+      <br>
+      <section >
+        <div class="row">
+          <div class="col s4 m4 l4 offset-s4 offset-l4 offset-m4"> <hr></div> <br> <br> <br>
+        </div>
+        <div class="row" style="width: 85%; margin: auto;">
+          
+          <div class="col s12 m5 ">
+            <p style="font-size:20px; text-align: justify;">
+              Cardiovascular diseases are one of the highest causes of death in the world. Their impact on society and the population is increasingly critical in recent years. However, with early detection and recognition of such diseases, a significant number of lives can be saved. This helps patients with more critical needs of treatment get priority access to doctors and healthcare systems in place. There is a need to visit doctors regularly to assess medical reports of the patients. This is not accessible or feasible to many people around the world. 
+              Our project aims to create an easy-to-use website which anyone can access and use to check their risk of cardiovascular disease. The website also provides users with a target or ideal heart that is appropriate and healthy for their age and other factors. Users can just enter data from the medical report into the website. The website would return a value between 0 and 1 which is the probability of heart disease. It uses a logistic regression model which has an 85.25% percent accuracy rate. 
+            </p>
+            </div>
+            <div class="col s12 m6 offset-m1">
+              <img src="{% static 'img/ab2.png' %}"  class="responsive-img">
+        </div>
+      </section> 
+
+      <br> <br> <br> <br> 
+        
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+              
+            
+    
+
+       
+              
+        
+    
+          
+          {% endblock %}

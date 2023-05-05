@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>SRM Major Project</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  {% block css %}
+  {% endblock %}
+  <style> 
+    footer {
+        padding-left: 295px;
+    }
+    .con{
+        padding-left: 360px;
+        width: 95%;
+    }
+    @media only screen and (max-width : 992px) {
+      .con, footer {
+        padding-left: 0;
+      }
+    }
+
+
+ </style>
+</head>
+<body>
+ 
+  <!-- Nav Bar-->
+        <div class="navbar-fixed">
+          <nav class="black">
+            <div class="container">
+              <div class="nav-wrapper">
+                <a href="/" style="padding-left: 100px;"    class="brand-logo ">CVD Risk Assesment</a>
+                <a href="" data-target="mobile-nav" class="sidenav-trigger">
+                  <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down hover_backcolor">
+                 
+               
+                
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  
+                  <a class=" white black-text waves-effect waves-dark btn  modal-trigger" href="/signout"><b>SIGN OUT </b></a>
+      
+                 
+                
+      
+      
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <ul id="mobile-nav" class="sidenav">
+          
+          <li><a href="about.html">AboutUs</a></li>
+          
+          <a class="black white-text waves-effect waves-light btn" style="margin-left: 27px; margin-top: 7px;">SIGN OUT</a>
+      
+           
+              
+      </ul>
+          
+      
+      <!-- SIDE NAV BAR-->
+
+      <ul id="slide-out" class="sidenav sidenav-fixed" style="background-color: #303234;">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="{% static 'img/ab2.png' %}">
+          </div>
+          <a href="#user"><img style="size: 30px; width: 40%;" src="{% static 'img/user.png' %}"></a>
+          <a href="#name"><span class="white-text name">User : {{ request.user.username }} </span></a>
+          <a href="#email"><span class="white-text email">{{ request.user.email }}</span></a>
+        </div></li> 
+        <br> 
+
+        <li><div class="divider"></div></li>
+        
+
+        
+        <li><a style="font-weight: 600; font-size: 18px; height: 70px; padding-top: 10px; color : white;" class="waves-effect hoverable" href="/"><i class="material-icons black-text" style="color : white !important;">batch_prediction</i> Predict your risk </a></li>
+        
+
+        
+       
+
+       
+        <li><a style="font-weight: 600; font-size: 18px; height: 70px; padding-top: 10px; color : white;" class="waves-effect hoverable" href="{% url 'symptoms' %}"><i class="material-icons black-text" style="color : white  !important;">assignment_late</i> Symptoms  </a></li>
+
+        <li><a style="font-weight: 600; font-size: 18px; height: 70px; padding-top: 10px; color : white;" class="waves-effect hoverable" href="{% url 'prevention' %}"><i class="material-icons black-text" style="color : white !important;">local_pharmacy</i> Prevention   </a></li>
+
+        <li><a style="font-weight: 600; font-size: 18px; height: 70px; padding-top: 10px; color : white;" class="waves-effect hoverable" href="{% url 'doctorhospital' %}"><i class="material-icons black-text" style="color : white !important;">local_hospital</i> Doctors & Hospitals   </a></li>
+
+        <li><div class="divider"></div></li>
+
+
+        
+      </ul>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        
+    {% block content %}
+    {% endblock %}
+            <!-- footer -->  
+      
+            <section> 
+      
+            <footer class=" hide-on-small-only black page-footer">
+              <div class="" style=" width: 90%; margin: auto;">
+                <div class="row">
+                  <div class="col  s12 m6 l3 ">
+                    <h5 class="white-text"></h5>
+                    <p class="grey-text text-lighten-4">RA1911028010001 RA1911028010020 NWC101 </p>
+                  </div>
+                
+                  <div class="col l2 m6 s12  ">
+                      <h5 class="white-text"></h5>
+                      <ul>
+                      <li>SRM University</li>
+                      
+                  </ul>     
+                  </div>
+      
+                 
+                </div>
+                <hr>
+              
+              
+              <div class="footer-copyright">
+              
+              
+            
+                
+              
+              </div>
+          </div>
+            </footer>
+      
+            <footer class=" hide-on-med-and-up black page-footer">
+              <div class="" style=" width: 90%; margin: auto;">
+                <div class="center-align row">
+                  <div class="col  s12 m6 l3 ">
+                    <h5 class="white-text"></h5>
+                    <p class="grey-text text-lighten-4">RA1911028010001 RA1911028010020 NWC101 </p>
+                  </div>
+                  
+                  <div class="col l2 m6 s12  ">
+                      <h5 class="white-text"></h5>
+                      <ul>
+                      <li>SRM University</li>
+                  
+                  </ul>     
+                  </div>
+      
+                
+                </div>
+                <hr>
+              
+              
+              <div class=" footer-copyright">
+              
+         
+              
+                
+             
+              </div>
+          </div>
+            </footer>
+      
+          </section>
+      
+      
+      
+          
+      
+      
+    
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/9478bf204b.js" crossorigin="anonymous"></script>
+
+  <script src="{% static 'js/materialize.js' %}"></script>
+  <script src="{% static 'js/init.js' %}"></script>
+
+  </body>
+</html>

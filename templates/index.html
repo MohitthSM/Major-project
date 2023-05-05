@@ -1,0 +1,35 @@
+{% extends 'base_layout.html' %}
+  {% load static %}   
+
+
+  {% block content %}
+      <div class="slider" >
+        <ul class="slides">
+          <li>
+            <img  src="{% static 'img/ab1.png' %}"> 
+    
+           
+    
+            <div class="caption left-align" >
+              <br> <br> <br>
+              <h2 style="color:white !important;" class="black-text">Calculate your Risk of <br>  Cardiovascular Disease Now</h2>
+              
+              <br>
+            
+              <a style=" color: black; background-color: white !important;" class=" black  waves-effect waves-light btn" href="{% url 'quickpredict' %}">  Predict Now </a>  &nbsp; &nbsp;
+              <a style=" color: black; background-color: white !important;"class=" black  waves-effect waves-light btn" href="{% url 'signup' %}"> Signup </a> 
+
+            </div>
+    
+           
+            
+    
+    
+          
+          </li>
+        
+        </ul>
+      </div>
+
+
+        {% endblock %}

@@ -1,0 +1,164 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <br> <br>
+
+    <h3 class="container center"> Please fill the following data correctly. </h3>
+    <br> <br>
+     <!--  form -->
+
+
+  <div style="width: 50%; background-color: #303234;" class="row ">
+    <form class="col s12" method="POST"> 
+
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix"style="color: white;">arrow_forward</i>
+          {{ form.age }}
+          <label for="a1" style="color : white;">Age</label>
+          <span class="helper-text" style="color : white;">Enter your age here</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix"style="color: white;">arrow_forward</i>
+          {{ form.sex }}
+          <label for="a2" style="color : white;">Sex</label>
+          <span class="helper-text" style="color : white;">Enter your sex here</span>
+        </div>
+      </div>
+
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix"style="color: white;">arrow_forward</i>
+          {{ form.cp }}
+          <label for="a3" style="color : white;">CP</label>
+          <span class="helper-text" style="color : white;"> Enter your Constructive Pericarditis here</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix"style="color: white;">arrow_forward</i>
+          {{ form.trestbps }}
+          <label for="a4" style="color : white;">Trestbps</label>
+          <span class="helper-text" style="color : white;">Enter your Resting Blood Pressure here</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix"style="color: white;">arrow_forward</i>
+          {{ form.chol }}
+          <label for="a5" style="color : white;">Chol</label>
+          <span class="helper-text" style="color : white;">Enter your Cholesterol here</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix"style="color: white;">arrow_forward</i>
+          {{ form.fbs }}
+          <label for="a6" style="color : white;">Fbs</label>
+          <span class="helper-text" style="color : white;">Enter your Fasting Blood Sugar here</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix"style="color: white;" >arrow_forward</i>
+          {{ form.restcg }}
+          <label for="a7" style="color : white;">Restcg</label>
+          <span class="helper-text" style="color : white;">Enter your Resting Electrocardiographic Result here</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix"style="color: white;">arrow_forward</i>
+          {{ form.thalach }}
+          <label for="a8" style="color : white;">Thalach</label>
+          <span class="helper-text" style="color : white;">Enter your Maximum Heart Rate Achieved here</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix"style="color: white;">arrow_forward</i>
+          {{ form.exang }}
+          <label for="a9" style="color : white;"> Exang</label>
+          <span class="helper-text" style="color : white;">Enter your Exercise Induced Angina here</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix"style="color: white;">arrow_forward</i>
+          {{ form.oldpeak }}
+          <label for="a10" style="color : white;">Oldpeak</label>
+          <span class="helper-text" style="color : white;">Enter your Exercise Relative to Rest here</span>
+        </div>
+      </div>
+
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix"style="color: white;">arrow_forward</i>
+          {{ form.slope }}
+          <label for="a11" style="color : white;">Slope</label>
+          <span class="helper-text" style="color : white;">Enter your Segment/Heart Rate here</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix"style="color: white;">arrow_forward</i>
+          {{ form.ca }}
+          <label for="a12" style="color : white;">Ca</label>
+          <span class="helper-text" style="color: white;">Enter your Ca here</span>
+        </div>
+      </div>
+
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix"style="color: white;">arrow_forward</i>
+          {{ form.thal }}
+          <label for="a13" style="color : white;">Thal</label>
+          <span class="helper-text" style="color : white;">Enter your Thalassemia here</span>
+        </div>
+      </div>
+      
+      
+      
+      {% csrf_token %}
+      <button class=" black btn waves-effect waves-light" type="submit" name="action" style=" color: black; background-color: white !important;" > Test Now
+        <i class="material-icons right">send</i>
+      </button>
+
+
+    </form>
+      
+        
+  </div>
+
+  <br>
+
+  {% endblock %}
